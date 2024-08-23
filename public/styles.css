@@ -1,0 +1,30 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('./blog.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+h1, h2 {
+    color: #f8f9fa;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.btn {
+    border-radius: 50px;
+}
+
+textarea, input[type="text"] {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+    border-radius: 10px;
+}

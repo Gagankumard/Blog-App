@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        body {
+            background-image: url('https://images.pexels.com/photos/14536856/pexels-photo-14536856.jpeg?auto=compress&cs=tinysrgb&w=600');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Optional: makes the image stay fixed during scroll */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Edit Post</h1>
+        <form action="/edit/<%= post.id %>" method="POST" class="mt-4">
+            <div class="form-group">
+                <input type="text" name="title" value="<%= post.title %>" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <textarea name="content" class="form-control" rows="5" required><%= post.content %></textarea>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-success btn-lg">Update Post</button>
+                <a href="/" class="btn btn-secondary btn-lg">Back to Home</a>
+            </div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

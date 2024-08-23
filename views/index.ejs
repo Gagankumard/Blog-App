@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container mt-5" style="margin-left:650px;">
+        <h1 class="text-center">Blog Posts</h1>
+        <div class="text-center mb-4">
+            <a href="/new" class="btn btn-primary btn-lg">Create New Post</a>
+        </div>
+        <div class="row">
+            <% posts.forEach(post => { %>
+                <div class="col-md-4 mb-4" >
+                    <div class="card h-100">
+                        <div class="card-body" style="background-color: rgb(13, 223, 153);">
+                            <h2 class="card-title"><%= post.title %></h2>
+                            <p class="card-text"><%= post.content %></p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between" style="background-color: rgb(58, 230, 173);">
+                            <a href="/edit/<%= post.id %>" class="btn btn-warning">Edit</a>
+                            <form action="/delete/<%= post.id %>" method="POST">
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
