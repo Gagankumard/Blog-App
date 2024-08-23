@@ -1,3 +1,3 @@
-#  Blog App Buid using Express and EJS.
+#  Blog App Buid using Express JS and EJS.
 
 
